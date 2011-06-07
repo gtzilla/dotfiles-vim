@@ -6,7 +6,16 @@ if has('syntax') && (&t_Co > 2)
 endif
 
 "Turn off search highlighting.
-set nohls
+set nohls                         
+
+
+" added from: http://jmcpherson.org/vimrc.html
+" prevents vim from emulating VIs bugs and such not (see link for more)
+set nocompatible
+
+" allow the cursor to move freely in command mode -- weird but cool
+set virtualedit=all
+
 
 "The ai is really annoying
 set noai
@@ -66,7 +75,7 @@ autocmd FileType html set formatoptions+=tl
 autocmd FileType make set noexpandtab shiftwidth=8
 
 "jquery syntax http://www.vim.org/scripts/script.php?script_id=2416
-au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
+"au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
 
 "js headers
 "autocmd bufnewfile *.js so ~/.vim/headers/js_header.txt

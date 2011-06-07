@@ -1,0 +1,7 @@
+Just Some VIM files
+=======
+
+Setup some symlinks out of the project to their real home
+
+ln -s  ~/Documents/projects/dotfiles-vim/vimrc ~/.vimrc
+ln -s  ~/Documents/projects/dotfiles-vim/vim ~/.vim 
