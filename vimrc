@@ -74,8 +74,6 @@ autocmd FileType html set formatoptions+=tl
 " (despite the mappings later):
 autocmd FileType make set noexpandtab shiftwidth=8
 
-"jquery syntax http://www.vim.org/scripts/script.php?script_id=2416
-"au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
 
 "js headers
 "autocmd bufnewfile *.js so ~/.vim/headers/js_header.txt
@@ -89,5 +87,5 @@ autocmd FileType make set noexpandtab shiftwidth=8
 "set mouse support
 " http://babbage.cs.qc.edu/courses/cs701/Handouts/unix_vimrc.html
 set mouse=a
-set selectmode=mouse
+"set selectmode=mouse
 
