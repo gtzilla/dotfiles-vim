@@ -46,6 +46,11 @@ set autoindent
 set expandtab
 
 
+" http://vim.wikia.com/wiki/Open_every_buffer_in_its_own_tabpage
+" Open every buffer in its own tabpage
+au BufAdd,BufNewFile * nested tab sball
+
+
 "turn off annoying beeps and flash screen instead
 set visualbell
 
@@ -54,7 +59,11 @@ set ruler
 
 "wrap textfiles at 72 chars and a key combo to do it
 autocmd BufEnter *.txt setlocal textwidth=72
+autocmd BufEnter *.txt,*.md setlocal spell spelllang=en_us
 map <C-J> :g/^/normal gqq<CR>
+" try and map to system clipboard
+"vmap <D-c> :w !pbcopy <CR><CR>
+
 
 " enable filetype detection
 filetype on
