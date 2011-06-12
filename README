@@ -168,15 +168,3 @@ cut N number of lines (close command with c)
       " Open every buffer in its own tabpage
       au BufAdd,BufNewFile * nested tab sball
 
-      add the new JS files to closure compile
-      re-compile JS
-
-      Update from bitly/master
-      Merge into trunk
-
-
-
-
-
-
-
