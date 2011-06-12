@@ -5,3 +5,178 @@ Setup some symlinks out of the project to their real home
 
 ln -s  ~/Documents/projects/dotfiles-vim/vimrc ~/.vimrc
 ln -s  ~/Documents/projects/dotfiles-vim/vim ~/.vim 
+
+
+Some Commands I like and use
+=========
+
+vim tabs
+
+vim -p <file or files>
+vim -p *.js
+
+Open Buffers into tabs
+http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
+:tab sball
+(opens all files in buffer in tabs)
+
+buffers
+:ls
+:bd (close current buffer)
+:bp (previous buffer)
+:bn (next buffer)
+:buffers (list buffers)
+
+vim marks
+:marks
+
+ma (set a mark
+'a (jump to a mark)
+
+Visual mode hightlight lines
+C-v
+
+Auto complete
+C-p (in insert mode) complete word
+C-n (in insert mode) complete token
+http://ruturajv.wordpress.com/2006/05/04/vim-auto-complete/
+
+Movement
+[ handy reference: http://www.worldtimzone.com/res/vi.html ]
+C-f
+forward screen/page
+C-b
+backward screen/page
+
+C-o
+(open some type of sub command and goes to last mark)
+
+C-r
+redo
+
+u
+undo last
+
+Open Multiple files at once
+:next <filename> <filename>
+[note, with the auto tab create stuff in my vimrc, this opens it into a tab view]
+
+
+On a Single Screen (page)
+H
+first line of screen
+M
+middle line of screen
+
+L
+last line of screen
+
+
+VIM formatting
+http://stackoverflow.com/questions/857885/formatting-php-code-within-vim
+
+autoformatting
+
+gg=G
+shift + v (select lines in visual mode) = (equals key)
+
+
+Insert Mode
+
+s
+cut a single letter, enter insert mode
+S
+cut single line (Whole live)  enter insert mode
+
+i
+insert before
+
+a
+insert after
+
+A
+insert after last Char in line
+
+I
+insert before first char (in line?)
+
+c # c
+cut N number of lines (close command with c)
+ Aka to cut two lines
+  c2c
+   to cut this line
+    cc
+     to cut 30 lines
+      c30c
+
+
+      VIM editing/saving files
+
+
+      :e <filename>
+      open a file
+
+      :tabf <filename>
+      open a file in a new tab viewport
+
+      Save As
+      :w other_filename
+
+      Save
+      :w
+
+      Save and Exit
+      :wq
+      :x
+
+      quit
+      :q
+
+      quit (no write or mod)
+      :q!
+
+
+      Help All Ex Commands
+
+      :help holy-grail
+
+
+      Spelling / Spell Check
+      http://researchweb.iiit.ac.in/~smr/data/advanced_vim_tutorial.pdf
+
+
+      autocmd BufEnter *.txt,*.md setlocal spell spelllang=en_us
+
+      set smartindent
+      set autoindent
+      set expandtab
+
+      nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+      imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+      nmap <F2> :.w !pbcopy<CR><CR>
+      vmap <F2> :w !pbcopy<CR><CR>
+
+
+      Write a register to a file
+      http://vim.1045645.n5.nabble.com/dump-register-to-file-without-open-tp1170411p1170420.html
+
+
+
+      Tabs
+      http://vim.wikia.com/wiki/Open_vimrc_file
+      " http://vim.wikia.com/wiki/Open_every_buffer_in_its_own_tabpage
+      " Open every buffer in its own tabpage
+      au BufAdd,BufNewFile * nested tab sball
+
+      add the new JS files to closure compile
+      re-compile JS
+
+      Update from bitly/master
+      Merge into trunk
+
+
+
+
+
+
+

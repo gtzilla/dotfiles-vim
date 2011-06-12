@@ -40,15 +40,12 @@ set shiftwidth=4
 set shiftround
 set expandtab " can't make my mind up on this one
 set autoindent " same with this one
-"set cindent
 set smartindent
-set autoindent
-set expandtab
 
 
 " http://vim.wikia.com/wiki/Open_every_buffer_in_its_own_tabpage
 " Open every buffer in its own tabpage
-au BufAdd,BufNewFile * nested tab sball
+autocmd BufAdd,BufNewFile * nested tab sball
 
 
 "turn off annoying beeps and flash screen instead
