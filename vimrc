@@ -6,8 +6,17 @@ if has('syntax') && (&t_Co > 2)
 endif
 
 "Turn off search highlighting.
-"set nohls                         
-hi Search ctermbg=LightGrey
+set nohls 
+"show the first so-far matched pattern when searching
+set incsearch 
+
+hi Search ctermbg=LightGreen
+" remap n so it highlights the entire match value
+" http://vim.1045645.n5.nabble.com/Highlight-matched-string-under-cursor-td1148846.html
+" see second answer
+nmap n n:match Search /\%#<C-R>//<CR> 
+nmap N N:match Search /\%#<C-R>//<CR>
+
 
 " added from: http://jmcpherson.org/vimrc.html
 " prevents vim from emulating VIs bugs and such not (see link for more)
@@ -23,8 +32,7 @@ set noai
 "allow deleting over evertying in insert mode
 set backspace=indent,eol,start
 
-"show the first so-far matched pattern when searching
-set incsearch
+
 
 "display incomplete command
 set showcmd
