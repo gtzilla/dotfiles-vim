@@ -6,8 +6,8 @@ if has('syntax') && (&t_Co > 2)
 endif
 
 "Turn off search highlighting.
-set nohls                         
-
+"set nohls                         
+hi Search ctermbg=LightGrey
 
 " added from: http://jmcpherson.org/vimrc.html
 " prevents vim from emulating VIs bugs and such not (see link for more)
@@ -36,7 +36,7 @@ set nu
 set tabstop=4
 
 "use indents of 2 spaces, and have them copied down lines:
-set shiftwidth=4
+set shiftwidth=4                                                       
 set shiftround
 set expandtab " can't make my mind up on this one
 set autoindent " same with this one
@@ -46,6 +46,7 @@ set smartindent
 " http://vim.wikia.com/wiki/Open_every_buffer_in_its_own_tabpage
 " Open every buffer in its own tabpage
 autocmd BufAdd,BufNewFile * nested tab sball
+
 
 
 "turn off annoying beeps and flash screen instead
@@ -64,6 +65,8 @@ map <C-J> :g/^/normal gqq<CR>
 
 " enable filetype detection
 filetype on
+filetype plugin on
+filetype indent on 
 
 " for c-like programming have auto indent
 autocmd FileType c,cpp,slang set cindent
@@ -94,4 +97,15 @@ autocmd FileType make set noexpandtab shiftwidth=8
 " http://babbage.cs.qc.edu/courses/cs701/Handouts/unix_vimrc.html
 set mouse=a
 "set selectmode=mouse
+
+
+" Ideas for more vim coolness
+" http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks
+
+" http://stackoverflow.com/posts/95309/revisions
+" 7dd <-- will delete 7 rows
+" 7 arrow down <-- moves down 7 times
+
+
+" http://www.ukuug.org/events/linux2004/programme/paper-SMyers/Linux_2004_slides/vim_tips/
 
