@@ -1,0 +1,22 @@
+
+
+" https://github.com/tpope/vim-pathogen
+syntax on
+filetype plugin indent on
+colorscheme slate
+
+" file behavior
+set hidden
+set nobackup
+set noswapfile
+set number
+
+set nohls 
+"show the first so-far matched pattern when searching
+set incsearch 
+nmap n n:match Search /\%#<C-R>//<CR> 
+nmap N N:match Search /\%#<C-R>//<CR>
+
+set ruler
+
+call pathogen#infect()

@@ -1,0 +1,7 @@
+
+" Overrides for the janus VIM confgi project
+
+set transparency=15
+
+set guifont=Menlo\ Regular:h12
+colorscheme slate

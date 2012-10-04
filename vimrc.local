@@ -1,0 +1,55 @@
+" this goes with the janus plugin set. trying out macvim -- again
+"
+"
+" A MacVIM config file
+
+" needs experimental renderer
+
+
+syntax on
+colorscheme slate
+
+
+set guioptions=aAce
+
+" file behavior
+set hidden
+set nobackup
+set noswapfile
+
+
+"override the stuff from janus
+" set shiftwidth=4
+" set softtabstop=4
+
+set nohls 
+"show the first so-far matched pattern when searching
+set incsearch 
+
+hi Search ctermbg=LightGreen
+" remap n so it highlights the entire match value
+" http://vim.1045645.n5.nabble.com/Highlight-matched-string-under-cursor-td1148846.html
+" see second answer
+nmap n n:match Search /\%#<C-R>//<CR> 
+nmap N N:match Search /\%#<C-R>//<CR>
+
+set ruler
+
+au BufNewFile,BufRead *.less set filetype=less
+"call pathogen#infect()
+
+
+if has("gui_macvim")
+    let macvim_hig_shift_movement = 1
+endif
+
+autocmd BufEnter *.txt,*.md setlocal spell spelllang=en_us
+
+
+" for the go lang
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+
+
+

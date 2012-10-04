@@ -17,6 +17,12 @@ hi Search ctermbg=LightGreen
 nmap n n:match Search /\%#<C-R>//<CR> 
 nmap N N:match Search /\%#<C-R>//<CR>
 
+" http://stackoverflow.com/questions/3922384/use-a-register-value-as-search-pattern
+" http://stackoverflow.com/questions/2312844/vim-yank-into-search-register
+"let @/=@0
+" use pattern
+" //g to find latest item is register.
+" :help /\=
 
 " added from: http://jmcpherson.org/vimrc.html
 " prevents vim from emulating VIs bugs and such not (see link for more)
